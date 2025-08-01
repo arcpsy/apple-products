@@ -1,3 +1,12 @@
+/*
+ * globals.css
+ *
+ * This file contains global reset styles and CSS variables for
+ * desktop (1024px and up) sizing and spacing.
+ * All pixel values have been converted to rem units for better
+ * accessibility and consistent scaling when the root font-size changes.
+ */
+
 *,
 *::before,
 *::after {
@@ -42,13 +51,13 @@ p {
    --clr-border-white: #fff;
    --clr-violator: #b64400;
 
-   /* Font Size Variables */
-   --fs-heading: 2.5em;
-   --fs-title: 0.909rem;
-   --fs-price: 1rem;
-   --fs-violator: 0.797rem;
-   --fs-plus: 15px;
-   --fs-shop-link: 17px;
+   /* Font Size Variables (Desktop Default) */
+   --fs-heading: 2.5rem; /* 40px */
+   --fs-title: 0.909rem; /* ~14.54px */
+   --fs-price: 1rem; /* 16px */
+   --fs-violator: 0.797rem; /* ~12.75px */
+   --fs-plus: 0.9375rem; /* 15px */
+   --fs-shop-link: 1.0625rem; /* 17px */
 
    /* Font Weight Variables */
    --fw-heading: 600;
@@ -62,46 +71,45 @@ p {
    --lh-shop-link: 1;
 
    /* Letter Spacing Variables */
-   --ls-violator: -0.12px;
-   --ls-shop-link: -0.274px;
+   --ls-violator: -0.0075rem; /* -0.12px */
+   --ls-shop-link: -0.017125rem; /* -0.274px */
 
    /* Main Container Variables */
-   --max-w-container: 1070px;
-   --m-container: 5rem auto 10rem;
-   --p-container-mobile: 0 1rem;
+   --max-w-container: 66.875rem; /* 1070px */
+   --m-container: 3.125rem auto 6.25rem; /* 50px auto 100px */
 
    /* Sub Container Variables */
-   --min-h-info-section-container: 126px;
-   --h-color-section-container: 28px;
-   --h-color-gallery-container: 16px;
-   --h-violator-container: 20px;
-   --h-title-container: 72px;
-   --h-price-container: 20px;
-   --pt-shop-link-container: 24px;
-   --px-shop-link-container: 20px;
+   --min-h-info-section-container: 7.875rem; /* 126px */
+   --h-color-section-container: 1.75rem; /* 28px */
+   --h-color-gallery-container: 1rem; /* 16px */
+   --h-violator-container: 1.25rem; /* 20px */
+   --h-title-container: 4.5rem; /* 72px */
+   --h-price-container: 1.25rem; /* 20px */
+   --pt-shop-link-container: 1.5rem; /* 24px */
+   --px-shop-link-container: 1.25rem; /* 20px */
 
    /* Spacing Variables - Margin */
-   --m-heading: 65px 0 27px;
-   --mt-violator: 19px;
-   --m-price: 6px 0px 7px;
-   --mx-dot: 4.2px;
-   --mx-plus: 2px;
+   --m-heading: 4.0625rem 0 1.6875rem; /* 65px 0 27px */
+   --mt-violator: 1.1875rem; /* 19px */
+   --mb-title: 0.375rem;
+   --m-price: auto 0 0.4375rem; /* 6px 0px 7px */
+   --mx-dot: 0.2625rem; /* 4.2px */
+   --mx-plus: 0.125rem; /* 2px */
    --ml-shop-link-arrow: 0.281rem;
-   --mb-shop-link-arrow: 2px;
+   --mb-shop-link-arrow: 0.125rem; /* 2px */
 
    /* Spacing Variables - Padding */
-   --p-card: 40px 40px 34px;
-   --p-title: 8px 15px 24px;
-   --p-mobile: 25px 25px 20px;
+   --p-card: 2.5rem 2.5rem 2.125rem; /* 40px 40px 34px */
+   --p-title: 0.5rem 0.9375rem 1.5rem; /* 8px 15px 24px */
 
    /* Color Dot Item & Shop Link Arrowhead Size */
-   --size-color-dot: 12px;
+   --size-color-dot: 0.75rem; /* 12px */
    --w-shop-link-arrow: 0.359rem;
-   --h-shop-link-arrow: 20px;
+   --h-shop-link-arrow: 1.25rem; /* 20px */
 
    /* Item-2 Image Container */
-   --m-item2-image: -40px -40px 0;
-   --w-item2-image: calc(100% + 80px);
+   --m-item2-image: -2.5rem -2.5rem 0; /* -40px -40px 0 */
+   --w-item2-image: calc(100% + 5rem); /* calc(100% + 80px) */
 }
 
 body {

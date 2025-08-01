@@ -1,3 +1,12 @@
+/*
+ * main.css
+ *
+ * This file contains the main layout styles and media queries
+ * to adjust sizing and spacing based on viewport width.
+ * CSS variables defined in :root are overridden within media queries
+ * to achieve breakpoint-specific content scaling.
+ */
+
 .featured-accessories {
    width: 100%;
    max-width: var(--max-w-container);
@@ -23,8 +32,8 @@
 
 .product-card {
    background-color: var(--clr-bg-card);
-   border: 5px solid var(--clr-border-white);
-   border-radius: 20px;
+   border: 5px solid var(--clr-border-white); /* Border is kept as fixed px */
+   border-radius: 20px; /* Border radius is kept as fixed px */
    overflow: hidden;
    display: flex;
    flex-direction: column;
@@ -47,7 +56,7 @@
    grid-area: item-5;
 }
 
-/* Makes the whole card clickable  */
+/* Makes the whole card clickable */
 .product-card__link {
    display: flex;
    flex-direction: column;
@@ -65,7 +74,6 @@
 
 /* Product image container */
 .product-card__image-container {
-   flex-grow: 1;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -73,8 +81,9 @@
 
 /* Product info container */
 .product-card__info-section {
-   flex-shrink: 0;
-   min-height: var(--min-h-info-section-container);
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
 }
 
 /* COLOR GALLERY FIELD */
@@ -135,8 +144,8 @@
 
 /* TITLE FIELD */
 .product-card__title {
+   margin-bottom: var(--mb-title);
    padding: var(--p-title);
-   height: var(--h-title-container);
    font-size: var(--fs-title);
    font-weight: var(--fw-title);
    transition: all 0.1s ease;
@@ -195,37 +204,83 @@
    margin-left: var(--ml-shop-link-arrow);
    margin-bottom: var(--mb-shop-link-arrow);
    vertical-align: middle;
-   background-image: url("data:image/svg+xml,%3Csvg width='5' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L10.5 10L1.5 18.5' stroke='%230066CC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+   background-image: url("data:image/svg+xml,%3Csvg width='5' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000%2Fsvg'%3E%3Cpath d='M1.5 1.5L10.5 10L1.5 18.5' stroke='%230066CC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
    background-repeat: no-repeat;
    background-position: center right;
    background-size: contain;
 }
 
+/* --- Manual Image Container Padding for Alignment --- */
+/* Adust for desktop */
+.item-1 .product-card__image-container {
+   padding-top: 4rem;
+   padding-bottom: 4.063rem;
+}
+
+.item-3 .product-card__image-container,
+.item-4 .product-card__image-container {
+   padding-top: 0.938rem;
+   padding-bottom: 0.625rem;
+}
+
 /* Mobile (up to 767px) */
 @media (max-width: 767px) {
    .product-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto;
       grid-template-areas:
-         "item-1"
-         "item-2"
-         "item-3"
-         "item-4"
-         "item-5";
+         "item-2 item-2"
+         "item-1 item-3"
+         "item-4 item-5";
+   }
+
+   /* Override variables for Mobile breakpoint */
+   :root {
+      --fs-heading: 1.75rem; /* 28px */
+      --fs-title: 0.625rem; /* 12px */
+      --fs-price: 0.8125rem; /* 13px */
+      --fs-violator: 0.75rem; /* 12px */
+      --fs-plus: 0.8125rem; /* 13px */
+      --fs-shop-link: 0.9375rem; /* 15px */
+
+      --m-heading: 1.875rem 0 1.25rem; /* 30px 0 20px */
+      --m-container: 1.875rem auto 3.125rem; /* 30px auto 50px */
+      --mt-violator: 0.75rem; /* 12px */
+      --m-price: 0.3125rem 0 0.375rem; /* 5px 0 6px */
+      --p-card: 1.5625rem; /* 25px */
+      --p-title: 0.5rem 0.625rem 0.8125rem; /* 8px 10px 13px */
+
+      --h-color-section-container: 1.5rem; /* 24px */
+      --h-color-gallery-container: 0.8125rem; /* 13px */
+      --h-violator-container: 1rem; /* 16px */
+      --h-title-container: 3.5rem; /* 56px */
+      --h-price-container: 1rem; /* 16px */
+      --pt-shop-link-container: 1.25rem; /* 20px */
+      --px-shop-link-container: 1rem; /* 16px */
+
+      --size-color-dot: 0.5rem; /* 8px */
+      --mx-dot: 0.1875rem; /* 3px */
+      --mx-plus: 0.0625rem; /* 1px */
+      --w-shop-link-arrow: 0.3125rem; /* 5px */
+      --h-shop-link-arrow: 1rem; /* 16px */
+      --ml-shop-link-arrow: 0.1875rem; /* 3px */
+      --mb-shop-link-arrow: 0.0625rem; /* 1px */
    }
 
    .featured-accessories {
-      padding: var(--p-container-mobile);
+      padding-inline: 0.25rem;
    }
 
-   .featured-accessories__heading {
-      font-size: 2em;
-      margin-bottom: 30px;
+   /* Mobile specific manual image container padding */
+   .item-1 .product-card__image-container {
+      padding-top: 1.5rem; /* Example: Adjust for mobile */
+      padding-bottom: 1.5rem; /* Example: Adjust for mobile */
    }
 
-   .product-card__tile-content {
-      padding: var(--p-mobile);
+   .item-3 .product-card__image-container,
+   .item-4 .product-card__image-container {
+      padding-top: 1rem; /* Example: Adjust for mobile */
+      padding-bottom: 1rem; /* Example: Adjust for mobile */
    }
 }
 
@@ -238,6 +293,59 @@
          "item-1 item-2 item-2"
          "item-3 item-4 item-5";
    }
+
+   /* Override variables for Tablet breakpoint */
+   :root {
+      --fs-heading: 2rem; /* 32px */
+      --fs-title: 0.688rem; /* 12px */
+      --fs-price: 0.688rem; /* 15px */
+      --fs-violator: 0.625rem; /* 12px */
+      --fs-plus: 0.688rem; /* 14px */
+      --fs-shop-link: 0.813rem; /* 16px */
+
+      --m-heading: 2.5rem 0 1.5rem; /* 40px 0 24px */
+      --m-container: 2.5rem auto 5rem; /* 40px auto 80px */
+      --mt-violator: 1rem; /* 16px */
+      --mb-title: 0.375rem;
+      --m-price: auto 0 0.4375rem; /* 6px 0 7px */
+      --p-card: 1.25rem 1.25rem 1.063rem; /* 32px */
+      --p-title: 0.5rem 0.8125rem 1.25rem; /* 8px 13px 20px */
+
+      --h-color-section-container: 1.625rem; /* 26px */
+      --h-color-gallery-container: 0.813rem; /* 15px */
+      --h-violator-container: 1.125rem; /* 18px */
+      --h-title-container: 4rem; /* 64px */
+      --h-price-container: 1.125rem; /* 18px */
+      --pt-shop-link-container: 1.375rem; /* 22px */
+      --px-shop-link-container: 1.125rem; /* 18px */
+
+      --size-color-dot: 0.563rem; /* 10px */
+      --mx-dot: 0.188rem; /* 4px */
+      --mx-plus: 0.063rem; /* 1.5px */
+      --w-shop-link-arrow: 0.34375rem; /* 5.5px */
+      --h-shop-link-arrow: 1.125rem; /* 18px */
+      --ml-shop-link-arrow: 0.25rem; /* 4px */
+      --mb-shop-link-arrow: 0.125rem; /* 2px */
+
+      --m-item2-image: -1.25rem -1.25rem 0; /* -40px -40px 0 */
+      --w-item2-image: calc(100% + 2.5rem); /* calc(100% + 80px) */
+   }
+
+   .featured-accessories {
+      padding-inline: 0.75rem;
+   }
+
+   /* Tablet specific manual image container padding */
+   .item-1 .product-card__image-container {
+      padding-top: 3.5rem;
+      padding-bottom: 1.5rem;
+   }
+
+   .item-3 .product-card__image-container,
+   .item-4 .product-card__image-container {
+      padding-top: 0.75rem;
+      padding-bottom: 0.375rem;
+   }
 }
 
 /* Desktop (1024px and up) */
@@ -248,5 +356,17 @@
       grid-template-areas:
          "item-1 item-2 item-2"
          "item-3 item-4 item-5";
+   }
+
+   /* Desktop specific manual image container padding */
+   .item-1 .product-card__image-container {
+      padding-top: 4rem;
+      padding-bottom: 4.063rem;
+   }
+
+   .item-3 .product-card__image-container,
+   .item-4 .product-card__image-container {
+      padding-top: 0.938rem;
+      padding-bottom: 0.625rem;
    }
 }
