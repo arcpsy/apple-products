@@ -2,7 +2,7 @@
 
 Hellows!
 
-This project is currently a work-in-progress, this is for the SAMAHAN System Development org application. Due to recent commitments with other subjects, specifically Cybersec and Techno, and this is the current progress I was able to do from my available time. The Stage 2 will come soon!
+This project is currently a work-in-progress, this is for the SAMAHAN System Development org application. Due to recent commitments with other subjects, specifically Cybersec and Techno, this is the current progress I was able to do from my available time. The Stage 2 will come soon!
 
 ### Features & Tech
 
