@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+ul[role="list"],
+ol[role="list"] {
+   list-style: none;
+   padding-left: 0;
+}
+
+a,
+a:visited,
+a:active {
+   color: inherit;
+   text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+   margin-block-end: 0;
+}
+
+:root {
+   /* Color Variables */
+   --clr-text-primary: #1d1d1f;
+   --clr-text-secondary: #424245;
+   --clr-hover-link: #0066cc;
+   --clr-bg-card: #f5f5f7;
+   --clr-border-white: #fff;
+   --clr-violator: #b64400;
+
+   /* Font Size Variables */
+   --fs-heading: 2.5em;
+   --fs-title: 0.909rem;
+   --fs-price: 1rem;
+   --fs-violator: 0.797rem;
+   --fs-plus: 15px;
+   --fs-shop-link: 17px;
+
+   /* Font Weight Variables */
+   --fw-heading: 600;
+   --fw-title: 500;
+   --fw-violator: 600;
+   --fw-plus: 400;
+
+   /* Line Height Variables */
+   --lh-heading: 1.1;
+   --lh-title: 1.3;
+   --lh-shop-link: 1;
+
+   /* Letter Spacing Variables */
+   --ls-violator: -0.12px;
+   --ls-shop-link: -0.274px;
+
+   /* Main Container Variables */
+   --max-w-container: 1070px;
+   --m-container: 5rem auto 10rem;
+   --p-container-mobile: 0 1rem;
+
+   /* Sub Container Variables */
+   --min-h-color-section-container: 28px;
+   --h-color-gallery-container: 16px;
+   --min-h-info-section-container: 126px;
+   --h-violator-container: 20px;
+   --h-title-container: 72px;
+   --h-price-container: 20px;
+   --pt-shop-link-container: 24px;
+   --px-shop-link-container: 20px;
+
+   /* Spacing Variables */
+   --p-card: 40px 40px 34px;
+   --p-mobile: 25px 25px 20px;
+   --m-heading: 65px 0 27px;
+   --mt-info-section: 19px;
+   --m-title: 8px 0px 10px;
+   --p-title: 0px 15px 14px;
+   --mt-price: 6px;
+   --mx-dot: 4px;
+   --mx-plus: 2px;
+   --ml-shop-link-arrow: 0.281rem;
+   --mb-shop-link-arrow: 2px;
+
+   /* Color Dot Item & Shop Link Arrowhead Size */
+   --size-color-dot: 12px;
+   --w-shop-link-arrow: 0.359rem;
+   --h-shop-link-arrow: 20px;
+
+   /* Item-2 Image Container */
+   --m-item2-image: -40px -40px 0;
+   --w-item2-image: calc(100% + 80px);
+}
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   color: var(--clr-text-primary);
+}
