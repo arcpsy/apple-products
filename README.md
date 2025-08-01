@@ -30,3 +30,25 @@ This project is currently a work-in-progress, this is for the SAMAHAN System Dev
         ├── colors/
         └── products/
 ```
+
+### Stage 1
+✅ "Featured iPhone Accessories" Grid Section  
+✅ Product Cards: Each card contains:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Product image  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Title  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Price  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Colored dots (non-interactive)  
+✅ iPhone Cases Only  
+✅ Entire Card is Clickable!  
+✅ Hover Transition for Product Name: all 0.1s ease  
+✅ "Shop Cases & Protection" Link does not redirect to any page.  
+✅ Bento Grid Layout - The layout closely matches the specified Bento grid design.  
+
+**✅ Others (Not required):**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Color Gallery  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Violator Badge ("New")  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Color Swatch Display (included (+) indicator for more than 6 colors)
+
+
+**Link to deployed website:**  
+https://apple-products-lovat.vercel.app/
