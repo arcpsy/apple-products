@@ -1,6 +1,8 @@
 ### Current Status & Future Plans
 
-Hi! This project is still a work-in-progress, this is for the SAMAHAN System Development org application. I've recently got busy with other subjects, specifically Cybersec and Techno, and this is still the best I can do from my available time. The Stage 2 will come soon!
+Hellows!
+
+This project is currently a work-in-progress, this is for the SAMAHAN System Development org application. Due to recent commitments with other subjects, specifically Cybersec and Techno, and this is the current progress I was able to do from my available time. The Stage 2 will come soon!
 
 ### Features & Tech
 
