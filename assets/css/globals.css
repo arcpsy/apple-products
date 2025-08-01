@@ -71,27 +71,28 @@ p {
    --p-container-mobile: 0 1rem;
 
    /* Sub Container Variables */
-   --min-h-color-section-container: 28px;
-   --h-color-gallery-container: 16px;
    --min-h-info-section-container: 126px;
+   --h-color-section-container: 28px;
+   --h-color-gallery-container: 16px;
    --h-violator-container: 20px;
    --h-title-container: 72px;
    --h-price-container: 20px;
    --pt-shop-link-container: 24px;
    --px-shop-link-container: 20px;
 
-   /* Spacing Variables */
-   --p-card: 40px 40px 34px;
-   --p-mobile: 25px 25px 20px;
+   /* Spacing Variables - Margin */
    --m-heading: 65px 0 27px;
-   --mt-info-section: 19px;
-   --m-title: 8px 0px 10px;
-   --p-title: 0px 15px 14px;
-   --mt-price: 6px;
-   --mx-dot: 4px;
+   --mt-violator: 19px;
+   --m-price: 6px 0px 7px;
+   --mx-dot: 4.2px;
    --mx-plus: 2px;
    --ml-shop-link-arrow: 0.281rem;
    --mb-shop-link-arrow: 2px;
+
+   /* Spacing Variables - Padding */
+   --p-card: 40px 40px 34px;
+   --p-title: 8px 15px 24px;
+   --p-mobile: 25px 25px 20px;
 
    /* Color Dot Item & Shop Link Arrowhead Size */
    --size-color-dot: 12px;
